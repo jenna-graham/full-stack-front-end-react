@@ -1,22 +1,23 @@
 async function doFetch(url, method, body) {
-    const options = {
-        method,
-        headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-        },
-        credentials: 'include',
-    };
+  const options = {
+    method,
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    credentials: 'include',
+    mode: 'cors',
+  };
 
-    if (body) options.body = JSON.stringify(body);
+  if (body) options.body = JSON.stringify(body);
 
-    const res = await fetch(url, options);
+  const res = await fetch(url, options);
 
-    const resBody = await res.json();
-    const error = res.ok ? null : resBody;
-    const data = res.ok ? resBody : null;
+  const resBody = await res.json();
+  const error = res.ok ? null : resBody;
+  const data = res.ok ? resBody : null;
 
-    return { error, data };
+  return { error, data };
 }
 
 export const get = (url) => doFetch(url, 'GET');
