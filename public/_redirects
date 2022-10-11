@@ -1,2 +1,2 @@
-/api/* http://localhost:7890/api/v1/users:splat  200
+/api/* https://full-stack-app-react.herokuapp.com/api/:splat  200
 /*  /index.html   200
