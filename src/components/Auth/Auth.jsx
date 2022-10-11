@@ -3,13 +3,13 @@ import { useUser } from '../../state/UserContext.jsx';
 import styles from './Auth.css';
 
 export default function Auth() {
-    const user = useUser();
+  const user = useUser();
 
-    if(user) return <Navigate to='/' />
-    return (
-        <main className={styles.Auth}>
-            <h1>Display List</h1>
-            <Outlet />
-        </main>
-    )
+  if(user) return <Navigate to="/" />;
+  return (
+    <main className={styles.Auth}>
+      <h1>Display List</h1>
+      <Outlet />
+    </main>
+  );
 }

@@ -1,2 +1,2 @@
-/api/* https://to-do-list-backend-fullstack.herokuapp.com/ :splat  200
+/api/* https://full-stack-app-react.herokuapp.com/api/:splat  200
 /*  /index.html   200
